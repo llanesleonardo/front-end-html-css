@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Email Sent</title>
+    <title>Log in</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +36,6 @@
         display: grid;
         grid-template-rows: auto 1fr auto;
         width: 300px;
-        justify-items: center;
       }
       .logo {
         width: 150px;
@@ -45,46 +44,36 @@
         display: none;
       }
 
-      .title {
-        font-size: var(--lg);
-        margin-bottom: 12px;
-        text-align: center;
-      }
-      .subtitle {
-        color: var(--very-light-pink);
-        font-size: var(--md);
-        font-weight: 300;
-        margin-bottom: 30px;
-        margin-top: 0;
-        text-align: center;
-      }
-
-      .email-image {
-        width: 132px;
-        height: 132px;
-        border-radius: 50%;
-        background-color: var(--text-input-field);
-        margin-bottom: 48px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 24px;
-      }
-      .email-image img {
-        width: 80px;
-      }
-
-      .resend {
+      label {
         font-size: var(--sm);
+        font-weight: 700;
+        margin-bottom: 4px;
       }
 
-      .resend span {
-        color: var(--very-light-pink);
+      .input {
+        background-color: var(--text-input-field);
+        border: none;
+        border-radius: 8px;
+        height: 30px;
+        font-size: var(--md);
+        padding: 6px;
+        margin-bottom: 12px;
       }
 
-      .resend a {
+      .input-email {
+        margin-bottom: 22px;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form a {
         color: var(--hospital-green);
+        font-size: var(--sm);
         text-decoration: none;
+        margin-bottom: 54px;
       }
 
       .primary-button {
@@ -99,9 +88,28 @@
         height: 50px;
       }
 
+      .secondary-button {
+        background-color: var(--white);
+        border-radius: 8px;
+        border: 1px solid var(--hospital-green);
+        color: var(--hospital-green);
+        width: 100%;
+        cursor: pointer;
+        font-size: var(--md);
+        font-weight: 700;
+        height: 50px;
+      }
+
       .login-button {
         margin-top: 14px;
         margin-bottom: 14px;
+      }
+
+      .signup-button {
+        position: fixed;
+        bottom: 0;
+        width: 300px;
+        margin-bottom: 15px;
       }
 
       @media (max-width: 640px) {
@@ -115,19 +123,30 @@
     <div class="login">
       <div class="form-container">
         <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo" />
+        <form action="/" class="form">
+          <label for="email" class="label" name="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="nombre@example.com"
+            class="input input-email"
+          />
 
-        <h1 class="title">Email has been sent!</h1>
-        <p class="subtitle">
-          Please check your inbox for instructions on how to reset the password
-        </p>
-        <div class="email-image">
-          <img src="./icons/email.svg" alt="emaillogo" />
-        </div>
-        <button class="primary-button login-button">Login</button>
-        <p class="resend">
-          <span>Didn't recieve the email?</span>
-          <a href="/"> Resend</a>
-        </p>
+          <label for="password" class="label" name="password">Password </label>
+          <input
+            type="password"
+            id="password"
+            placeholder="*******"
+            class="input input-password"
+          />
+          <input
+            type="submit"
+            value="Log in"
+            class="primary-button login-button"
+          />
+          <a href="/"> Forgot my password</a>
+        </form>
+        <button class="secondary-button signup-button">Sign up</button>
       </div>
     </div>
   </body>
