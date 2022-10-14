@@ -1,3 +1,5 @@
+/*Estilos Generales*/
+
 :root {
   --white: #ffffff;
   --black: #000000;
@@ -20,6 +22,11 @@ body {
   width: 100px;
 }
 
+.inactive {
+  display: none;
+}
+
+/*Estilos NavBar*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -86,6 +93,7 @@ nav {
   cursor: pointer;
 }
 
+/*Desktop Menu*/
 .desktop-menu {
   position: absolute;
   top: 60px;
@@ -130,8 +138,44 @@ nav {
   display: inline-block;
 }
 
-.inactive {
-  display: none;
+/*Mobile Menu*/
+
+.mobile-menu {
+  position: absolute;
+  top: 60px;
+  padding: 24px;
+}
+
+.mobile-menu div {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.mobile-menu ul li {
+  margin-bottom: 24px;
+}
+
+.mobile-menu .email {
+  font-size: var(--sm);
+  font-weight: 300;
+}
+
+.mobile-menu .signout {
+  font-size: var(--sm);
+  color: var(--hospital-green);
+  font-weight: bold;
 }
 
 @media (max-width: 640px) {
@@ -139,12 +183,25 @@ nav {
     display: block;
     width: 30px;
   }
-
   .navbar-left ul {
     display: none;
   }
 
   .navbar-email {
+    display: none;
+  }
+  .mobile-menu {
+    height: 100%;
+    justify-content: space-evenly;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .mobile-menu {
     display: none;
   }
 }
