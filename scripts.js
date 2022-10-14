@@ -5,6 +5,7 @@ const mobileMenu = document.querySelector(".mobile-menu");
 
 const menuCarrito = document.querySelector(".navbar-shopping-cart");
 const menuAsideCart = document.querySelector(".my-cart");
+const cardsContainer = document.querySelector(".card-container");
 
 navemail.addEventListener("click", toggleSubMenu);
 botonHamIcon.addEventListener("click", toggleMobileMenu);
@@ -48,3 +49,64 @@ function toggleAsideCart() {
 
   menuAsideCart.classList.toggle("inactive");
 }
+
+const productsList = [];
+productsList.push({
+  id: 1,
+  name: "Bike1",
+  price: "30.00",
+  imageUrl:
+    "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+});
+
+productsList.push({
+  id: 2,
+  name: "Bike1",
+  price: "30.00",
+  imageUrl:
+    "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+});
+
+productsList.push({
+  id: 2,
+  name: "Bike1",
+  price: "30.00",
+  imageUrl:
+    "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+});
+
+function renderProducts(arr) {
+  for (const product of productsList) {
+    const productCard = document.createElement("div");
+    productCard.classList.add("product-card");
+
+    const mainImg = document.createElement("img");
+    mainImg.classList.add("product-img");
+    mainImg.setAttribute("src", product.imageUrl);
+    mainImg.setAttribute("alt", product.name);
+    const productCardInfo = document.createElement("div");
+    productCardInfo.classList.add("product-info");
+
+    const divCustom1 = document.createElement("div");
+    const productPrice = document.createElement("p");
+    const productName = document.createElement("p");
+    productPrice.innerText = "$ " + product.price;
+    productName.innerText = product.name;
+
+    const productFigure = document.createElement("figure");
+    const imgCart = document.createElement("img");
+    imgCart.setAttribute("src", "./icons/bt_add_to_cart.svg");
+    imgCart.setAttribute("alt", "agregar a carrito");
+
+    productFigure.appendChild(imgCart);
+    divCustom1.appendChild(productPrice);
+    divCustom1.appendChild(productName);
+    productCardInfo.appendChild(divCustom1);
+    productCard.appendChild(mainImg);
+    productCard.appendChild(productCardInfo);
+
+    cardsContainer.appendChild(productCard);
+  }
+}
+
+renderProducts(productsList);
