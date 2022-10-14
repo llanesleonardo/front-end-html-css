@@ -26,12 +26,12 @@
         font-family: "Quicksand", sans-serif;
         margin: 0;
       }
-      .my-cart{
-      width: 360px;
-      padding: 24px;
-      box-sizing: border-box;
-      position: absolute;
-      right: 0;
+      .my-cart {
+        width: 360px;
+        padding: 24px;
+        box-sizing: border-box;
+        position: absolute;
+        right: 0;
       }
 
       .title {
@@ -40,8 +40,7 @@
         margin-left: 12px;
       }
 
-
-      .order{
+      .order {
         background-color: var(--text-input-field);
         display: grid;
         grid-template-columns: auto 1fr;
@@ -52,23 +51,23 @@
         padding: 0 24px;
       }
 
-      .order p:nth-child(1){
+      .order p:nth-child(1) {
         display: flex;
         flex-direction: column;
       }
 
-      .order p:last-child{
-       text-align: end;
-       font-weight: bold;
+      .order p:last-child {
+        text-align: end;
+        font-weight: bold;
       }
 
-      .order p span:nth-child(1){
-       font-size: var(--md);
-       font-weight: bold;
+      .order p span:nth-child(1) {
+        font-size: var(--md);
+        font-weight: bold;
       }
-      .order p span:nth-child(2){
-       font-size: var(--sm);
-       color: var(--very-light-pink);
+      .order p span:nth-child(2) {
+        font-size: var(--sm);
+        color: var(--very-light-pink);
       }
 
       .shopping-cart {
@@ -79,22 +78,22 @@
         align-items: center;
       }
 
-      .shopping-cart figure{
-      margin: 0;
+      .shopping-cart figure {
+        margin: 0;
       }
 
-      .shopping-cart figure img{
+      .shopping-cart figure img {
         width: 70px;
         height: 70px;
         border-radius: 20px;
         object-fit: cover;
       }
 
-      .shopping-cart p:nth-child(2){
+      .shopping-cart p:nth-child(2) {
         color: var(--very-light-pink);
       }
 
-      .shopping-cart p:nth-child(3){
+      .shopping-cart p:nth-child(3) {
         font-size: var(--md);
         font-weight: bold;
       }
@@ -110,78 +109,75 @@
         height: 50px;
       }
 
-      .title-container{
+      .title-container {
         display: flex;
-
       }
 
-      .title-container img{
+      .title-container img {
         transform: rotate(180deg);
       }
 
-      @media(max-width:640px){
-          .my-cart{
-            width: 100%;
-          }
+      @media (max-width: 640px) {
+        .my-cart {
+          width: 100%;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="my-cart">
+    <aside class="my-cart">
       <div class="my-order-container">
         <div class="title-container">
-          <img src="./icons/flechita.svg" alt="atras">
+          <img src="./icons/flechita.svg" alt="atras" />
           <p class="title">Shopping cart</p>
         </div>
-        
-        <div class="my-order-content">
 
-            <div class="shopping-cart">
-                <figure>
-                <img
-                    src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="bike"
-                />
-                </figure>
-                <p>Bike</p>
-                <p>$30.0</p>
-                <img src="./icons/icon_close.png" alt="removeproduct">
-            </div>
-            <!-- -- -->
-            <div class="shopping-cart">
-                <figure>
-                <img
-                    src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="bike"
-                />
-                </figure>
-                <p>Bike</p>
-                <p>$30.0</p>
-                <img src="./icons/icon_close.png" alt="removeproduct">
-            </div>
-            <!-- -- -->
-            <div class="shopping-cart">
-                <figure>
-                <img
-                    src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="bike"
-                />
-                </figure>
-                <p>Bike</p>
-                <p>$30.0</p>
-                <img src="./icons/icon_close.png" alt="removeproduct">
-            </div>
-            <!-- -- -->
-            <div class="order">
-              <p>
-              <span>Total</span>
-          </p>
-          <p>$560.0</p>
-          
+        <div class="my-order-content">
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="bike"
+              />
+            </figure>
+            <p>Bike</p>
+            <p>$30.0</p>
+            <img src="./icons/icon_close.png" alt="removeproduct" />
           </div>
-          <button class="primary-button checkout-button">
-            Checkout
-          </button>
-    </div>
+          <!-- -- -->
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="bike"
+              />
+            </figure>
+            <p>Bike</p>
+            <p>$30.0</p>
+            <img src="./icons/icon_close.png" alt="removeproduct" />
+          </div>
+          <!-- -- -->
+          <div class="shopping-cart">
+            <figure>
+              <img
+                src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="bike"
+              />
+            </figure>
+            <p>Bike</p>
+            <p>$30.0</p>
+            <img src="./icons/icon_close.png" alt="removeproduct" />
+          </div>
+          <!-- -- -->
+          <div class="order">
+            <p>
+              <span>Total</span>
+            </p>
+            <p>$560.0</p>
+          </div>
+          <button class="primary-button checkout-button">Checkout</button>
+        </div>
+      </div>
+    </aside>
   </body>
 </html>
