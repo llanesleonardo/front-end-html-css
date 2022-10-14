@@ -111,7 +111,7 @@
       </div>
     </nav>
 
-    <aside class="my-cart inactive">
+    <aside id="shoppingCartContainer" class="my-cart inactive">
       <div class="my-order-container">
         <div class="title-container">
           <img src="./icons/flechita.svg" alt="atras" />
@@ -166,26 +166,28 @@
       </div>
     </aside>
 
-    <section class="main-container">
-      <div class="card-container">
-        <!-- <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt=""
-            class="product-img"
-          />
-          <div class="product-info">
-            <div>
-              <p>$120.00</p>
-              <p>Bike</p>
-            </div>
-            <figure>
-              <img src="./icons/bt_add_to_cart.svg" alt="agregar a carrito" />
-            </figure>
-          </div>
-        </div>  -->
-        <!--  -->
+    <aside id="productDetail" class="product-detail">
+      <div class="product-detail-close">
+        <img src="./icons/icon_close.png" alt="cerrar" />
       </div>
+
+      <img
+        src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="bike"
+      />
+      <div class="product-info">
+        <p>$35.00</p>
+        <p>Bike</p>
+        <p>Nice and easy to ride</p>
+      </div>
+      <button class="primary-button add-to-cart-button">
+        <img src="./icons/bt_add_to_cart.svg" alt="addcart" />
+        Add to cart
+      </button>
+    </aside>
+
+    <section class="main-container">
+      <div class="card-container"></div>
     </section>
     <script src="./scripts.js"></script>
   </body>

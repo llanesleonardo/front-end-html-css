@@ -4,7 +4,7 @@ const botonHamIcon = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 
 const menuCarrito = document.querySelector(".navbar-shopping-cart");
-const menuAsideCart = document.querySelector(".my-cart");
+const menuAsideCart = document.querySelector("#shoppingCartContainer");
 const cardsContainer = document.querySelector(".card-container");
 
 navemail.addEventListener("click", toggleSubMenu);
